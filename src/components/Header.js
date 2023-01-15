@@ -1,10 +1,12 @@
+import React from "react";
+
 function Header() {
     return (
-        <nav class="navbar bg-light">
-  <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1">The Royal Bank of Flatiron</span>
-  </div>
-</nav>
+        <nav className="navbar">
+            <div className="container">
+            <span className="navbar-brand mb-0 h1">The Royal Bank of Flatiron</span>
+            </div>
+        </nav>
     )
 }
 
