@@ -97,6 +97,13 @@
       "category": "Food",
       "amount": "3000",
       "id": 14
+    },
+    {
+      "date": "2023-01-09",
+      "description": "Reporting Moringa School",
+      "category": "Coding",
+      "amount": "53000",
+      "id": 15
     }
   ]
 }
