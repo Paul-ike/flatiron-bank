@@ -62,4 +62,3 @@
 Copyright 2021 Paul Wanyoike Ngugi Licensed under[MT License]('https://github.com/Paul-ike/bank-flatiron/blob/main/LICENSE')
 
 ![Screenshot](./images/1.png)
-![Screenshot](./images/2.png)
