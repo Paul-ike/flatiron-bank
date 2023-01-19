@@ -2,7 +2,8 @@ import React from "react";
 import Transaction from "./Transaction";
 
 function TransactionsList({ transactionData, searchName }) {
-    let renderedtransactionList = ""
+  
+  let renderedtransactionList
 
   if(transactionData){
     const filteredTransactionData = transactionData.filter(transaction => {
