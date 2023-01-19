@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from 'sweetalert2'
 
 function Form({ newData }) {
     const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ function Form({ newData }) {
         category:"",
         amount:""
       })
+      // setFormData("")
     
       function handleSubmit(event) {
         event.preventDefault()
@@ -20,8 +22,16 @@ function Form({ newData }) {
         })
           .then(res => res.json())
           .then(data => newData(data))
+          // Swal.fire({
+          //   title: 'Transaction Added',
+          //   text: 'Updated successfully',
+          //   icon: 'success',
+          //   confirmButtonText: 'Exit',
+          //   confirmButtonColor:"green"
+          // })
+          document.location.reload();
       }
-    
+
       function handleChange(event) {
         event.preventDefault()
         const key = event.target.name
@@ -32,22 +42,22 @@ function Form({ newData }) {
     return (
         <div className="container">
         <form onSubmit={ handleSubmit }>
-            <div className="d-flex justify-content-center py-3">
-            <div className="px-2">
+            <div className="row">
+            <div className="col-3">
                 <input onChange={ handleChange } type="date" name="date" />
             </div>
-            <div className="px-2">
+            <div className="col-3">
                 <input onChange={ handleChange } type="text" name="description" placeholder="Description" />
             </div>
-            <div className="px-2">
+            <div className="col-3">
                 <input onChange={ handleChange } type="text" name="category" placeholder="Category" />
             </div>
-            <div className="px-2">
+            <div className="col-3">
                 <input onChange={ handleChange } type="number" name="amount" placeholder="Amount" step="0.01" />
             </div>
             </div>
             <div className="text-center py-2">
-            <button type="submit" class="btn btn-outline-primary">Add Transaction</button>
+            <button type="submit" className="btn btn-outline-primary btn-sm">Add Transaction</button>
             </div>
         </form>
         </div>

@@ -11,6 +11,7 @@ function TransactionsList({ transactionData, searchName }) {
      renderedtransactionList = filteredTransactionData.map((transaction) => (
     <Transaction
       key={transaction.id}
+      id={transaction.id}
       date={transaction.date}
       description={transaction.description}
       category={transaction.category}
@@ -28,6 +29,7 @@ function TransactionsList({ transactionData, searchName }) {
                     <th scope="col"><h3>Description</h3></th>
                     <th scope="col"><h3>Category</h3></th>
                     <th scope="col"><h3>Amount</h3></th>
+                    <th scope="col"><h3>Delete</h3></th>
                     </tr>
                 </thead>
                 <tbody>
